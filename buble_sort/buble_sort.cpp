@@ -48,11 +48,21 @@ void unsorted() {
 	cout << endl;							// Output baris kosong
 }
 
+void display() {
+	cout << endl;										// Output baris kosong
+	cout << "=================================" << endl;	// Output ke layar
+	cout << "Elemen Array yang sudah tersusun" << endl;			// Output ke layar
+	cout << "=================================" << endl;	// Output ke layar
+	for (int j = 0; j < n; j++) {			// Looping dengan j dimulai dari 0 hingga n-1
+		cout << a[j] << endl;				// Output ke layar
+	}
+	cout << endl;							// Output baris kosong
+}
 int main() {
-	input();			//Memanggil procedur read()
+	input();			// Memanggil procedur read()
 	unsorted();			// Memanggil procedur unsorted() dari
-	bubbleSortArray();	// Memanggil procedur bubbleShortArray()
-	display();	// Memanggil procedur display()
+	bubbleSortArray();	// Memanggil procedur bubbleSortArray()
+	display(); 
 
 	return 0;
 }
