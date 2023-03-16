@@ -15,7 +15,7 @@ void input() {		// procedur untuk input
 			cout << "\nArray dapat mempunyai maksimal 20 elemen.\n";	//Output ke layar
 		}
 	}
-	cout << end;								// Output baris kosong
+	cout << endl;								// Output baris kosong
 	cout << "====================" << endl;		// Output ke layar
 	cout << "Masukan Elemen Array" << endl;		// Output ke layar
 	cout << "====================" << endl;		// Output ke layar
@@ -29,7 +29,7 @@ void bubbleSortArray() {					// Procedur untuk mengurutkan array dengan metode b
 	for (int i = 1; i < n; i++) {			// Looping dengan i dimulali dari 1 hingga n-1
 		for (int j = 0; j < n - i; j++) {	// Looping dengan j dimulai dari 0 hingga n-i-1
 			if (a[j] > a[j + 1]) {		// Jika nilai pada a[j] lebih besar dari a[j+1]
-				int temp = a[j]			// Simpan nilai a[j] ke variabel sementara temp
+				int temp = a[j];			// Simpan nilai a[j] ke variabel sementara temp
 				a[j] = a[j + 1];		// Assign nilai a[j+1] ke a[j]
 				a[j + 1] = temp;		// Assign nilai temp ke a[j+1]
 			}
@@ -39,6 +39,21 @@ void bubbleSortArray() {					// Procedur untuk mengurutkan array dengan metode b
 
 void unsorted() {
 	cout << endl;										// Output baris kosong
-	cout << "=============================" << endl;	// Output ke layar
+	cout << "=================================" << endl;	// Output ke layar
+	cout << "Elemen Array yang belum tersusun" << endl;			// Output ke layar
+	cout << "=================================" << endl;	// Output ke layar
+	for (int j = 0; j < n; j++) {			// Looping dengan j dimulai dari 0 hingga n-1
+		cout << a[j] << endl;				// Output ke layar
+	}
+	cout << endl;							// Output baris kosong
+}
+
+int main() {
+	input();			//Memanggil procedur read()
+	unsorted();			// Memanggil procedur unsorted() dari
+	bubbleSortArray();	// Memanggil procedur bubbleShortArray()
+	display();	// Memanggil procedur display()
+
+	return 0;
 }
 
