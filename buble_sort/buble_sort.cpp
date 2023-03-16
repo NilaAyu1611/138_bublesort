@@ -58,6 +58,7 @@ void display() {
 	}
 	cout << endl;							// Output baris kosong
 }
+
 int main() {
 	input();			// Memanggil procedur read()
 	unsorted();			// Memanggil procedur unsorted() dari
